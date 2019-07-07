@@ -1,0 +1,66 @@
+// COLOR VARIABLES
+$color-primary: #5c5c5c;
+// $color-primary-dark: #667476;
+
+// $color-secondary: #6AD2F2;
+
+// $color-grey-light-1: #f9f7f6;
+// $color-grey-light-2: #aaa;
+
+// $color-grey-dark-1: #7A7474;
+// $color-grey-dark-2: #1B1C1C;
+
+// FONT VARIABLES
+// $font-primary: "Asap", sans-serif;
+// $font-display: 'Roboto', sans-serif;
+
+// // RESPONSIVE BREAKPOINTS
+// $bp-largest: 75em; // 1200px
+// $bp-large: 62.5em; // 1000px
+// $bp-medium: 50em; // 800px;
+// $bp-small: 37.5em; // 600px;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+  // font-family: $font-primary;
+  // color: $color-grey-dark-2;
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  z-index: -9999;
+  display: grid;
+  grid-template-rows: 15rem min-content 40vw repeat(3, min-content);
+  grid-template-columns:
+    [sidebar-start] 30rem [sidebar-end full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr)
+    [full-end];
+
+  & > * {
+    padding: 40px;
+    font-size: 1.75rem;
+  }
+}
+p {
+  padding-bottom: 20px;
+}
+.active {
+  background: #5c5c5c;
+}

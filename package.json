@@ -1,0 +1,45 @@
+{
+  "name": "react-environment",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://jaouadpxy.github.io/pure-react-envirement/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clear-build-cache": "rm -rf .cache/ dist/",
+    "dev": "parcel src/index.html -p 3000",
+    "format": "prettier --write \"src/**/*.{js,json,jsx,css}\"",
+    "lint": "eslint \"**/*.{js,jsx}\" --quiet",
+    "predeploy": "rm -rf dist && parcel build index.html --public-url /pure-react-envirement",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.14.2",
+    "gh-pages": "^2.0.1",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.18.2",
+    "sass": "^1.22.0"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-highlight": "^0.12.0",
+    "react-router-dom": "^5.0.1",
+    "react-scroll-up-button": "^1.6.4",
+    "react-spring": "^8.0.27",
+    "react-syntax-highlighter": "^11.0.1",
+    "tachyons-sass": "^4.9.5"
+  }
+}
